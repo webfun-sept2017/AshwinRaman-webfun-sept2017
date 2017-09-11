@@ -1,0 +1,220 @@
+MacBook-Pro:desktop mbp$ pwd
+/Users/mbp/desktop
+MacBook-Pro:desktop mbp$ mkdir gittest
+MacBook-Pro:desktop mbp$ cd gittest
+MacBook-Pro:gittest mbp$ git init
+Initialized empty Git repository in /Users/mbp/Desktop/gittest/.git/
+MacBook-Pro:gittest mbp$ touch index.html
+MacBook-Pro:gittest mbp$ touch styles.css
+MacBook-Pro:gittest mbp$ touch aboutMe.txt
+MacBook-Pro:gittest mbp$ ls
+aboutMe.txt	index.html	styles.css
+MacBook-Pro:gittest mbp$ git add .
+MacBook-Pro:gittest mbp$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   aboutMe.txt
+	new file:   index.html
+	new file:   styles.css
+
+MacBook-Pro:gittest mbp$ git commit -m "added three files"
+[master (root-commit) 39ca2ad] added three files
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aboutMe.txt
+ create mode 100644 index.html
+ create mode 100644 styles.css
+MacBook-Pro:gittest mbp$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   aboutMe.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MacBook-Pro:gittest mbp$ git add .
+MacBook-Pro:gittest mbp$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   aboutMe.txt
+
+MacBook-Pro:gittest mbp$ git commit -m "updated aboutMe"
+[master 1fa87cc] updated aboutMe
+ 1 file changed, 1 insertion(+)
+MacBook-Pro:gittest mbp$ git status
+On branch master
+nothing to commit, working tree clean
+MacBook-Pro:gittest mbp$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   aboutMe.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MacBook-Pro:gittest mbp$ git add .
+MacBook-Pro:gittest mbp$ git commit -m "added favorite movie to aboutMe"
+[master ae1b536] added favorite movie to aboutMe
+ 1 file changed, 2 insertions(+)
+MacBook-Pro:gittest mbp$ git status
+On branch master
+nothing to commit, working tree clean
+MacBook-Pro:gittest mbp$ git log
+commit ae1b536f757de00a9f4247f74ff095c98c8444ec (HEAD -> master)
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:06:14 2017 -0500
+
+    added favorite movie to aboutMe
+
+commit 1fa87cc5df7b33ac71a30ebcc730e1aa15881934
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:05:09 2017 -0500
+
+    updated aboutMe
+
+commit 39ca2addc194d21a2fd6ffd765562ad89767df42
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:03:52 2017 -0500
+
+    added three files
+MacBook-Pro:gittest mbp$ git revert -n 1fa87cc
+error: could not revert 1fa87cc... updated aboutMe
+hint: after resolving the conflicts, mark the corrected paths
+hint: with 'git add <paths>' or 'git rm <paths>'
+MacBook-Pro:gittest mbp$ git log
+commit ae1b536f757de00a9f4247f74ff095c98c8444ec (HEAD -> master)
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:06:14 2017 -0500
+
+    added favorite movie to aboutMe
+
+commit 1fa87cc5df7b33ac71a30ebcc730e1aa15881934
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:05:09 2017 -0500
+
+    updated aboutMe
+
+commit 39ca2addc194d21a2fd6ffd765562ad89767df42
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:03:52 2017 -0500
+
+    added three files
+MacBook-Pro:gittest mbp$ git revert -n ae1b536
+aboutMe.txt: unmerged (5adadba515b596276008cae69035f941243a472a)
+aboutMe.txt: unmerged (b2cd84763235988d40adac390f46bb8b165070fe)
+aboutMe.txt: unmerged (e69de29bb2d1d6434b8b29ae775ad8c2e48c5391)
+error: your index file is unmerged.
+fatal: revert failed
+MacBook-Pro:gittest mbp$ git status
+On branch master
+You are currently reverting commit 1fa87cc.
+  (fix conflicts and run "git revert --continue")
+  (use "git revert --abort" to cancel the revert operation)
+
+Unmerged paths:
+  (use "git reset HEAD <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+
+	both modified:   aboutMe.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MacBook-Pro:gittest mbp$ git log
+commit ae1b536f757de00a9f4247f74ff095c98c8444ec (HEAD -> master)
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:06:14 2017 -0500
+
+    added favorite movie to aboutMe
+
+commit 1fa87cc5df7b33ac71a30ebcc730e1aa15881934
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:05:09 2017 -0500
+
+    updated aboutMe
+
+commit 39ca2addc194d21a2fd6ffd765562ad89767df42
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:03:52 2017 -0500
+
+    added three files
+MacBook-Pro:gittest mbp$ git add .
+MacBook-Pro:gittest mbp$ git revert --continue
+[master 6708f0e] Revert "updated aboutMe"
+ 1 file changed, 3 insertions(+)
+MacBook-Pro:gittest mbp$ git status
+On branch master
+nothing to commit, working tree clean
+MacBook-Pro:gittest mbp$ git log
+commit 6708f0eada368db8386998e37e14a16fcaf25613 (HEAD -> master)
+commit 6708f0eada368db8386998e37e14a16fcaf25613 (HEAD -> master)
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:11:35 2017 -0500
+
+    Revert "updated aboutMe"
+    
+    This reverts commit 1fa87cc5df7b33ac71a30ebcc730e1aa15881934.
+
+commit ae1b536f757de00a9f4247f74ff095c98c8444ec
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:06:14 2017 -0500
+
+    added favorite movie to aboutMe
+
+commit 1fa87cc5df7b33ac71a30ebcc730e1aa15881934
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:05:09 2017 -0500
+
+    updated aboutMe
+
+commit 39ca2addc194d21a2fd6ffd765562ad89767df42
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:03:52 2017 -0500
+MacBook-Pro:gittest mbp$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   aboutMe.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MacBook-Pro:gittest mbp$ git add .
+MacBook-Pro:gittest mbp$ git commit -m "changed favorite movie to book"
+[master 51a7ce6] changed favorite movie to book
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+MacBook-Pro:gittest mbp$ git status
+On branch master
+nothing to commit, working tree clean
+MacBook-Pro:gittest mbp$ git log
+commit 51a7ce65b4e05e1f110eb7431506d2cdf3105ef3 (HEAD -> master)
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:16:21 2017 -0500
+
+    changed favorite movie to book
+
+commit 6708f0eada368db8386998e37e14a16fcaf25613
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:11:35 2017 -0500
+
+    Revert "updated aboutMe"
+    
+    This reverts commit 1fa87cc5df7b33ac71a30ebcc730e1aa15881934.
+
+commit ae1b536f757de00a9f4247f74ff095c98c8444ec
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:06:14 2017 -0500
+
+    added favorite movie to aboutMe
+
+commit 1fa87cc5df7b33ac71a30ebcc730e1aa15881934
+Author: arvisionz <ashwin.raman@gmail.com>
+Date:   Thu Sep 7 16:05:09 2017 -0500
+:
+

@@ -1,0 +1,39 @@
+MacBook-Pro:~ mbp$ cd desktop
+MacBook-Pro:desktop mbp$ mkdir GitHubRepoAssignment
+MacBook-Pro:desktop mbp$ cd GitHubRepoAssignment
+MacBook-Pro:GitHubRepoAssignment mbp$ git init
+Initialized empty Git repository in /Users/mbp/Desktop/GitHubRepoAssignment/.git/
+MacBook-Pro:GitHubRepoAssignment mbp$ touch readme.md
+MacBook-Pro:GitHubRepoAssignment mbp$ vi readme.md
+MacBook-Pro:GitHubRepoAssignment mbp$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	readme.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+MacBook-Pro:GitHubRepoAssignment mbp$ git add .
+MacBook-Pro:GitHubRepoAssignment mbp$ git commit -m "Made changes to readme file"
+[master (root-commit) 835dfb5] Made changes to readme file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.md
+MacBook-Pro:GitHubRepoAssignment mbp$ git status
+On branch master
+nothing to commit, working tree clean
+MacBook-Pro:GitHubRepoAssignment mbp$ git remote add origin https://github.com/arvisionz/GitHubRepoAssignment.git
+MacBook-Pro:GitHubRepoAssignment mbp$ git push -u origin master
+Username for 'https://github.com': arvisionz
+Password for 'https://arvisionz@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 294 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/arvisionz/GitHubRepoAssignment.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+MacBook-Pro:GitHubRepoAssignment mbp$ 
