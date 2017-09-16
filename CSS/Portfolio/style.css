@@ -1,0 +1,155 @@
+.wrapper{
+  width: 960px;
+  height: 1000px;
+}
+
+.header{
+  width: 938px;
+  height: 30px;
+  padding: 15px;
+}
+
+.header h2{
+  display: inline-block;
+  margin-right: 480px;
+}
+
+.header h3{
+  display: inline-block;
+}
+
+body *{
+	padding: 0px;
+	margin: 0px;
+	font-family: Arial;
+}
+
+.maincontent{
+	width: 929px;
+	height: 870px;
+  padding: 20px 20px;
+	background: -webkit-radial-gradient(#6f5964, #1f0f13); /* Safari */
+  background: -o-radial-gradient(#6f5964, #1f0f13); /* Opera */
+  background: -moz-radial-gradient(#6f5964, #1f0f13); /* Firefox */
+  background: radial-gradient(#6f5964, #1f0f13); /* Standard */
+}
+
+.maincontent img{
+	margin-bottom: 20px;
+	width: 410px;
+	height: auto;
+	border: 5px solid #7d7377;
+}
+
+.maincontent .about{
+	width: 500px;
+  height: 280px;
+	display: inline-block;
+	vertical-align: top;
+  background: -webkit-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Safari */
+  background: -o-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Opera */
+  background: -moz-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Firefox */
+  background: linear-gradient(to bottom right, #fefefe, #dbcbda); /* Standard syntax */
+}
+
+.maincontent .about h2 {
+	padding: 5px 10px;
+  color: white;
+	background: -webkit-linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Safari */
+  background: -o-linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Opera */
+  background: -moz-linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Firefox */
+  background: linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Standard syntax */
+}
+
+.maincontent p{
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.maincontent a{
+  padding-left: 10px;
+}
+
+.maincontent .projects {
+	width: 295px;
+	height: 570px;
+	display : inline-block;
+	background-color: lightgray;
+	vertical-align: top;
+	background: -webkit-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Safari */
+  background: -o-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Opera */
+  background: -moz-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Firefox */
+  background: linear-gradient(to bottom right, #fefefe, #dbcbda); /* Standard syntax */
+}
+
+.maincontent .projects.spacing {
+	margin-right: 15px;
+}
+
+.projects img,
+.projects ul {
+	width: 293px;
+	margin: 0;
+}
+
+.projects h2 {
+	width: 273;
+	padding: 5px 10px;
+	color: white;
+	background: -webkit-linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Safari */
+  background: -o-linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Opera */
+  background: -moz-linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Firefox */
+  background: linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Standard syntax */
+}
+.projects img{
+	border: none;
+}
+.project p{
+	width: 278;
+}
+.technologies {
+	padding: 15px 0px 0px 12px;
+}
+.technologies li{
+	display: inline-block;
+	margin-right: 10px;
+}
+.technologies img{
+	width: 40px;
+	height: 40px;
+}
+.projects button {
+	background-color: green;
+	color: white;
+	border:solid 1px black;
+	border-radius: 3px;
+	padding: 5px;
+	margin: 10px 100px;
+	font-weight: 900;
+}
+
+.footer{
+  width: 968px;
+  height: 50px;
+}
+
+.footer p
+{
+	margin: auto;
+	width: 240px;
+}
+.footer ul {
+	width: 380px;
+	margin: auto;
+}
+.footer ul li {
+	display: inline-block;
+}
+.footer img {
+	width: 25px;
+	height: auto;
+	margin: auto;
+}
+.footer, .header{
+	background-color: #f9f9f9
+}
