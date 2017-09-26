@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>If you don't mind, can I have the time?</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+		var HOUR = 8;
+		var MINUTE = 10;
+		var PERIOD = "AM"
+
+		var str = "It's ";
+
+		if(MINUTE > 30){
+			str += "almost " + (HOUR + 1)
+		}else{
+			str += "just after " + HOUR
+		}
+
+		if(PERIOD == "PM"){
+			str += " in the evening."
+		}else{
+			str += " in the morning."
+		}
+
+		console.log(str)
+    </script>
+  </body>
+</html>
