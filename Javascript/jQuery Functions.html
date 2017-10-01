@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Functions</title>
+
+	<style>
+	.selected {
+		color:orange;
+	}
+	</style>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#myParagraph').click(function(){
+				alert('This is a click function')
+			});
+			$('#hide').click(function(){
+				$('p').hide(), alert('The hides the text')
+			});
+			$('#show').click(function(){
+				$('p').show()
+			});
+      $('#toggle').click(function(){
+			$('p').toggle()
+		  })
+			$('#sdown').click(function(){
+				$('p').slideDown()
+			});
+			$('#sUp').click(function(){
+				$('p').slideUp()
+			});
+			$('#stoggle').click(function(){
+				$('p').slideToggle()
+			});
+			$('#fadeIn').click(function(){
+				$('p').fadeIn()
+			});
+			$('#fadeOut').click(function(){
+				$('p').fadeOut()
+			});
+			$('#addClass').click(function(){
+				$('p').addClass("selected"), alert("The text is now orange")
+			});
+			$('#before').click(function(){
+				$('p').before("<b> Hello </b>")
+			});
+			$('#after').click(function(){
+				$('p').after("<b> Hello </b>")
+			});
+			$('#append').click(function(){
+				$('p').append("<strong> Hello </strong>")
+			});
+			$('#html').click(function(){
+				$('p').html("<span class='red'> Hello <b> Again </b></span>")
+			});
+			$('#attr').click(function(){
+				$('p').attr("selected")
+			});
+			$('#attr').click(function(){
+				$('p').attr()
+			});
+			$('#val').click(function(){
+				$('p').val()
+			});
+			$('#text').click(function(){
+				$('p').text("This is the new text")
+			});
+			$('#data').click(function(){
+				$('p').data("Ashwin")
+			});
+		})
+	</script>
+
+
+</head>
+	<h1 style="font-size: 16pt" > This is my jQuery Functions Assignment </h1>
+
+	<p> Clicking this button will trigger an alert </p>
+	<button id='myParagraph'> Click to change the paragraph </button>
+
+	<p> This button hides the paragraph </p>
+	<button id='hide'> Click to hide the paragraph </button>
+
+	<p> This button shows the paragraph </p>
+	<button id='show'> Click to show the paragraph </button>
+
+	<p> This button will toggle between showing and hiding the paragraph </p>
+	<button id='toggle'> Click to toggle the paragraph </button>
+
+	<p> This button will slide down a hidden element </p>
+	<button id='sdown'> Click to slide down the paragraph </button>
+
+	<p> This button will slide up the hidden element </p>
+	<button id='sUp'> Click to slide up the paragraph </button>
+
+	<p> This button will toggle the sliding of the hidden element </p>
+	<button id='slideToggle'> Click to show or hide the paragraph </button>
+
+	<p> This button will fade in the paragraph </p>
+	<button id='fadeIn'> Click to fade in the paragraph </button>
+
+	<p> This button will fade out the paragraph </p>
+	<button id='fadeOut'> Click to fadeout the paragraph </button>
+
+	<p> This button will add a class to the paragraph </p>
+	<button id='addClass'> Click to add a class to the paragraph </button>
+
+	<p> This button will insert some HTML code before the paragraph </p>
+	<button id='before'> Click to add an element before the paragraph </button>
+
+	<p> This button will insert some HTML code after the paragraph </p>
+	<button id='after'> Click to add an element after the paragraph </button>
+
+	<p> This button will append the paragraph </p>
+	<button id='append'> Continue clicking to append the paragraph </button>
+
+	<p> This button will replace the html within the paragraph </p>
+	<button id='html'> Click to replace the html within the paragraph </button>
+
+	<p> This button will add attr to the paragraph </p>
+	<button id='attr'> Click to add attr to the paragraph </button>
+
+	<p> This will give the value of your input </p>
+	<input type="text" value="text">
+
+	<p> This button will replace the text in the paragraph </p>
+	<button id='text'> Click to change the text within the paragraph </button>
+
+	<p> This button will store a data value in the paragraph </p>
+	<button id='data'> My name is <span></span> </button>
+
+</body>
+</html>
