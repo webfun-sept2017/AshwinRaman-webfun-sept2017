@@ -1,0 +1,9 @@
+body{
+  background-color: blue;
+}
+
+div{
+  width: 175px;
+  margin: auto;
+  padding-top: 100px;
+}

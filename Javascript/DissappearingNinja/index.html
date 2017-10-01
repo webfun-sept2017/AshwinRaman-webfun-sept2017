@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Disappearing Ninja</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+		$(document).ready(function(){
+
+			$('img').click(function(){
+				$(this).hide()
+			});
+
+			$('button').click(function(){
+				$('img').fadeIn("slow")
+			})
+		})
+
+
+	</script>
+
+	<style type= "text/css">
+	.wrapper{
+		width: 1000px;
+		height: 1000px;
+	}
+	</style>
+
+</head>
+<body>
+<div class ="wrapper">
+	<h1 style="font-size: 28pt"> Disappearing Ninja </h1>
+	<img src ='basketball.jpg' >
+	<img src ='basketball.jpg' >
+	<img src ='basketball.jpg' >
+	<img src ='basketball.jpg' >
+	<img src ='basketball.jpg' >
+	<img src ='basketball.jpg' >
+	<img src ='basketball.jpg' >
+	<img src ='basketball.jpg' >
+	<img src ='basketball.jpg' >
+	<img src ='basketball.jpg' >
+
+	<br>
+
+	<button> Restore </button>
+
+
+</div>
+</body>
+<style type= "text/css">
+
+
+	img{
+		width:175px;
+		height: 175px;
+		border: 6px solid black;
+	}
+
+</style>
+</html>
