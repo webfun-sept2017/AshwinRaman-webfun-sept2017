@@ -1,0 +1,62 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif;
+}
+
+#wrapper{
+  width: 400px;
+  padding left: 30px;
+  display: inline-block;
+  background-color: cyan;
+}
+
+#wrapper h4{
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+#form{
+  padding-left: 40px;
+}
+
+button{
+  display: inline-block;
+  width: 100px;
+  padding: 5px;
+  margin-left: 110px;
+  padding-bottom: 3px;
+  margin-bottom: 3px;
+}
+
+input{
+  width: 200px;
+  border: 1px solid;
+  padding: 5px;
+  margin-bottom: 20px;
+
+}
+
+textarea{
+  border: 1px solid black;
+}
+
+#card{
+  width: 352px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: orange;
+}
+
+.contact_card{
+  width: 350px;
+  height: 100px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#click{
+  display: none;
+}
