@@ -1,0 +1,19 @@
+
+#pokemon{
+  width: 870px;
+  display: inline-block;
+}
+
+#viewbox{
+  padding-left: 42px;
+  width: 200px;
+  height: 550px;
+  margin-top: 30px;
+  display: inline-block;
+  vertical-align: top;
+  border: 18px solid red;
+}
+
+h3{
+  padding-top: 20px;
+}
